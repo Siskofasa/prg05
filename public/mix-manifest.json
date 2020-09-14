@@ -1,0 +1,15 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/java_page.js": "/js/java_page.js",
+    "/js/lis.js": "/js/lis.js",
+    "/js/parsons.js": "/js/parsons.js",
+    "/js/parsons_page.js": "/js/parsons_page.js",
+    "/js/pseudo_code_page.js": "/js/pseudo_code_page.js",
+    "/js/swap_page.js": "/js/swap_page.js",
+    "/js/toggle_page.js": "/js/toggle_page.js",
+    "/js/turtle.js": "/js/turtle.js",
+    "/js/turtle_page.js": "/js/turtle_page.js",
+    "/js/unit_test_page.js": "/js/unit_test_page.js",
+    "/css/parsons.css": "/css/parsons.css"
+}

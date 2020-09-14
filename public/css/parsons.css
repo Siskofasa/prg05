@@ -1,0 +1,319 @@
+/** Stylesheet for the puzzles */
+
+#parsonsProblem > h2 {
+    text-align: center;
+    font-size: 26px;
+}
+
+#parsonsProblem > p {
+    text-align: center;
+    font-style: italic;
+}
+
+.sortable-code {
+    position: static;
+    padding-left: 0px;
+    margin-left: 2%;
+    float: left;
+}
+#sortableTrash {
+    width: 45%;
+    border-radius: 5px;
+}
+#sortable {
+    width: 45%;
+    border-radius: 5px;
+}
+#removedDistractors {
+    width: 45%;
+    border-radius: 5px;
+}
+
+#sortable, #sortableTrash > p {
+    text-align: center;
+    font-style: italic;
+}
+.sortable-code ul {
+    font-size: 120%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    list-style: none;
+    padding: 10px 5px;
+    margin-left: 0;
+
+
+}
+.sortable-code ul:empty {
+  padding-bottom: 100%;
+}
+.sortable-code li, .sortable-code li:before, .sortable-code li:after {
+    box-sizing: content-box;
+
+}
+ul.output {
+    background-color: #DAE0EC;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    border: 1px solid #7946B5;
+}
+.sortable-code li {
+    border-radius: 3px;
+    border: 1px solid #7946B5;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 12);
+    padding:5px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: move;
+    background-color: #F6EEFF;
+    text-align: left;
+    font-style: normal;
+}
+
+.sortable-code li:hover {
+    overflow: visible;
+}
+
+ul.incorrect {
+    border: 1px solid red;
+    background-color: #ffefef;
+}
+
+ul.correct {
+    background-color: #efffef;
+    background-color: #DFF2BF;
+}
+
+li.incorrectIndent {
+    border: 1px solid red;
+    border-left: 10px solid red;
+}
+
+li.correctIndent {
+    border: 1px solid green;
+    border-left: 10px solid green;
+}
+
+li.incorrectPosition, .testcase.fail, .testcase.error {
+    background-color: #FFBABA;
+    border:1px solid red;
+}
+
+li.correctPosition, .testcase.pass {
+    background-color: #DFF2BF;
+    border:1px solid green;
+}
+
+.testcase { padding: 10px; margin-bottom: 10px;}
+.testcase .msg { font-weight: bold; }
+.testcase .error { color: red;}
+.testcase .feedback { font-weight: bolder;}
+.testcase .fail .expected, .testcase .fail .actual {
+    color: red;
+    font-weight: bolder;
+}
+.testcase .output {
+    display: block;
+    white-space: pre;
+    background-color: #555555;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+/** For styling the toggleable elements */
+.jsparson-toggle {
+    padding: 0 15px;
+    display: inline-block;
+    border: 1px dashed black;
+    z-index: 500;
+    cursor: pointer;
+    min-width: 10px;
+    min-height: 15px;
+}
+.jsparson-toggle:empty {
+    border-color: red;
+}
+.jsparson-toggle:empty:before {
+    content: "??";
+    display: block;
+    color: red;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-group > .btn {
+    flex-grow: 0;
+    margin: 10px 5px 0 5px;
+}
+
+.btn-group > .btn[disabled] {
+    flex-grow: 0;
+    margin: 10px 5px 0 5px;
+    pointer-events: none;
+}
+
+.button-bar{
+    width: 45%;
+    text-align: center;
+
+}
+
+.btn-check {
+    background-color: #00D889;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 3px 15px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 12);
+
+}
+
+.btn-check:hover {
+    background-color: white;
+    color: #00D889;
+    border: 1px solid #00D889;
+    font-weight: 700;
+
+}
+
+.btn-reset {
+    font-size: 18px;
+    background-color: white;
+    color: #FF2C3D;
+    border: 1px solid #FF2C3D;
+    font-weight: 700;
+    border-radius: 6px;
+    margin: 3px 15px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 12);
+}
+
+.btn-reset:hover {
+    background-color: #FF2C3D;
+    color: #FFF;
+    font-weight: 500;
+}
+
+#progressBar {
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#progressBar > ul {
+    display: inline-block;
+    text-align: center;
+}
+
+#progressBar > ul > li {
+    display: inline-block !important;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    text-align: center;
+    pointer-events: none;
+}
+
+#progressBar > ul > .notCompleted {
+    display: inline-block;
+    background-color: #B9B9B9;
+    color: #B9B9B9;
+}
+
+#progressBar > ul > .completed {
+    display: inline-block;
+    background-color: #7946B5;
+    color: #7946B5;
+}
+
+#progressBar > ul > .selected {
+    background-color: #7946B5;
+    color: #7946B5;
+}
+
+#progressBar > ul > li > button {
+    display: inline-block !important;
+    cursor: pointer;
+    /*height: 32px;*/
+    /*width: 32px;*/
+    margin-left: -9px;
+    margin-top: -9px;
+    border-radius: 50%;
+    text-align: center;
+    pointer-events: auto;
+    background-color: #6600cc;
+    border-color: #6600cc;
+}
+
+
+
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+}
+
+.hljs, .hljs-subst {
+    color: #444
+}
+
+.hljs-comment {
+    color: #aaaaaa
+}
+
+.hljs-attribute, .hljs-doctag, .hljs-name, .hljs-selector-tag {
+    font-weight: 700
+}
+
+.hljs-keyword, .hljs-meta-keyword {
+    color: blue;
+}
+
+.hljs-deletion, .hljs-selector-class, .hljs-selector-id, .hljs-template-tag, .hljs-type {
+    color: #66BDF2
+}
+
+.hljs-quote, .hljs-string {
+    color: #A31515
+}
+
+.hljs-number {
+    color: #09885A
+}
+
+.hljs-link, .hljs-regexp, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-symbol, .hljs-template-variable, .hljs-variable {
+    color: #000
+}
+
+.hljs-literal {
+    color: blue;
+}
+
+.hljs-addition, .hljs-built_in, .hljs-bullet, .hljs-code {
+    color: #397300
+}
+
+.hljs-meta {
+    color: #1f7199
+}
+
+.hljs-meta-string {
+    color: #66bdf2
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: 700
+}
